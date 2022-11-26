@@ -19,9 +19,7 @@ export type TRepeaterPromiseExtended = TRepeaterPromise & {
     state: TRepeaterState
     stop: TStopMethod
 }
-let i = 0
 export const useRepeater = (options: TRepeaterOptions) => {
-    i++
     const { call, repeatAfterMs, attemptsAmount } = options
     const state: TRepeaterState = {
         attemptsCount: 0,
