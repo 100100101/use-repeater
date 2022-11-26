@@ -19,7 +19,9 @@ export type TRepeaterPromiseExtended = TRepeaterPromise & {
     state: TRepeaterState
     stop: TStopMethod
 }
+let i = 0
 export const useRepeater = (options: TRepeaterOptions) => {
+    i++
     const { call, repeatAfterMs, attemptsAmount } = options
     const state: TRepeaterState = {
         attemptsCount: 0,
@@ -51,8 +53,8 @@ export const useRepeater = (options: TRepeaterOptions) => {
     const repeaterPromise = repeater() as TRepeaterPromiseExtended
     repeaterPromise.state = state
     repeaterPromise.stop = () => {
-        clearTimeout(state.timeout)
         state.isStopped = true
+        clearTimeout(state.timeout)
     }
     return repeaterPromise
 }
