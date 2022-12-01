@@ -52,7 +52,8 @@ export const useRepeater = (options: TRepeaterOptions) => {
     repeaterPromise.state = state
     repeaterPromise.stop = () => {
         state.isStopped = true
-        clearTimeout(state.timeout)
+        const { timeout } = state
+        if (timeout) clearTimeout(timeout)
     }
     return repeaterPromise
 }
