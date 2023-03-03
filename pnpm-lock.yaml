@@ -1,0 +1,29 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@types/node': ^18.14.6
+  package-auto-tsc: git+https://github.com/JSerGit/package-auto-tsc.git
+  typescript: ^4.9.5
+
+dependencies:
+  '@types/node': 18.14.6
+  package-auto-tsc: github.com/JSerGit/package-auto-tsc/66693540a102ec488ebb4cdba105232ed1ae3d6b
+  typescript: 4.9.5
+
+packages:
+
+  /@types/node/18.14.6:
+    resolution: {integrity: sha512-93+VvleD3mXwlLI/xASjw0FzKcwzl3OdTCzm1LaRfqgS21gfFtK3zDXM5Op9TeeMsJVOaJ2VRDpT9q4Y3d0AvA==}
+    dev: false
+
+  /typescript/4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: false
+
+  github.com/JSerGit/package-auto-tsc/66693540a102ec488ebb4cdba105232ed1ae3d6b:
+    resolution: {tarball: https://codeload.github.com/JSerGit/package-auto-tsc/tar.gz/66693540a102ec488ebb4cdba105232ed1ae3d6b}
+    name: package-auto-tsc
+    version: 1.0.0
+    dev: false

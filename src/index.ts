@@ -2,7 +2,7 @@ import {
     TRepeaterOptions,
     TRepeaterPromiseExtended,
     TRepeaterState,
-} from './types'
+} from '../types'
 export const useRepeater = (options: TRepeaterOptions) => {
     const { call, repeatAfterMs, attemptsAmount } = options
     const state: TRepeaterState = {
