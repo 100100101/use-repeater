@@ -10,6 +10,6 @@
     "dependencies": {
         "@types/node": "^18.14.6",
         "typescript": "^4.9.5",
-        "package-auto-tsc": "git+https://github.com/JSerGit/package-auto-tsc.git"
+        "package-auto-tsc": "git+https://github.com/100100101/package-auto-tsc.git"
     }
 }
