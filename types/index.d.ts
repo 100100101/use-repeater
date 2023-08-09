@@ -4,6 +4,7 @@ export type TRepeaterState = {
     result: any
     timeout: ReturnType<typeof setTimeout> | null
     isStopped: boolean
+    stop: () => void
 }
 export type TRepeaterCall = (
     state: TRepeaterState

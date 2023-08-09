@@ -5,13 +5,19 @@ import {
 } from '../types'
 export const useRepeater = (options: TRepeaterOptions) => {
     const { call, repeatAfterMs, attemptsAmount } = options
-    const state: TRepeaterState = {
+    const state = {
         attemptsCount: 0,
         repeatAfterMs: repeatAfterMs || 0,
         result: null,
         timeout: null,
         isStopped: false,
+    } as TRepeaterState
+    const stop = () => {
+        state.isStopped = true
+        const { timeout } = state
+        if (timeout) clearTimeout(timeout)
     }
+    state.stop = stop
     const repeater = async () => {
         for (;;) {
             if (
@@ -33,11 +39,8 @@ export const useRepeater = (options: TRepeaterOptions) => {
         }
     }
     const repeaterPromise = repeater() as TRepeaterPromiseExtended
+
     repeaterPromise.state = state
-    repeaterPromise.stop = () => {
-        state.isStopped = true
-        const { timeout } = state
-        if (timeout) clearTimeout(timeout)
-    }
+    repeaterPromise.stop = stop
     return repeaterPromise
 }
